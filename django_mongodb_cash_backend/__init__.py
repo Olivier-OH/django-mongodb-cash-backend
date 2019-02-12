@@ -223,7 +223,8 @@ class MongoDBCache(BaseCache):
     @reconnect()
     def clear(self):
         coll = self._get_collection()
-        if not 'capped' in self._db.command("collstats", self._collection_name):
+        collstats = self._db.command("collstats", self._collection_name)
+        if not 'capped' in collstats or not collstats['capped']:
             coll.remove({})
         else:
             coll.update({}, {'$set':{'expires':timezone.now()}})

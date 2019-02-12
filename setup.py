@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-mongodb-cash-backend',
-    version='2018.7.23',
+    version='2019.1.23',
     packages=['django_mongodb_cash_backend'],
     package_dir={'django_mongodb_cash_backend': 'django_mongodb_cash_backend'},
     provides=['django_mongodb_cash_backend'],
