@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-mongodb-cash-backend',
-    version='2020.2.18',
+    version='2020.8.13',
     packages=['django_mongodb_cash_backend'],
     package_dir={'django_mongodb_cash_backend': 'django_mongodb_cash_backend'},
     provides=['django_mongodb_cash_backend'],
@@ -16,8 +16,7 @@ setup(
     description='The only Django MongoDB Cache backend you need.',
     long_description=open('README.rst').read(),
     install_requires=[
-        'Django~=1.11.13',
-        'pymongo~=3.6.1'
+        'pymongo==3.*'
     ],
     keywords=[
         'django',
